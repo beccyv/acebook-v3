@@ -22,6 +22,9 @@
 /storage/*
 !/storage/.keep
 
+# Do not commit generated files in the coverage directory
+coverage/*
+
 /public/assets
 .byebug_history
 

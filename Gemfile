@@ -50,7 +50,7 @@ group :test do
   gem 'webdrivers'
 
   gem 'rspec-rails'
-  gem 'simplecov'
+  gem 'simplecov', require: false
   gem 'simplecov-console'
   gem 'travis'
 
