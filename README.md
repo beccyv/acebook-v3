@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+* Struggling with rails db:migrate RAILS_ENV=test which conflicted with simplecov. We figured out that `require :false was causing` us issues and thus commenting it out made our test db work. So if it runs every time we run our project then \_O_/ so be it.
