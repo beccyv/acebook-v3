@@ -55,22 +55,4 @@
 <% end %>
 
 
-<%= form_tag sessions_path do |form2| %>
-<p>
-  <%= form2.label :username %><br>
-  <%= form2.text_area :username %>
-</p>
-
-<p>
-  <%= form2.label :password %><br>
-  <%= form2.text_area :password %>
-</p>
-
-<p>
-  <%= form2.submit "Log in" %>
-</p>
-
-<% end %>
-
-
 <%= link_to 'Back', users_path %>
