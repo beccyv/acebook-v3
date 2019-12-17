@@ -1,4 +1,6 @@
 require 'simplecov'
+require 'capybara'
+require 'capybara/rspec'
 
 SimpleCov.start 'rails' do
   add_filter '/bin'

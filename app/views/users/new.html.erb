@@ -1,3 +1,4 @@
+<p id="alert"><%= alert %></p>
 <h1>New User</h1>
 
 <%= form_with scope: :user, url: users_path, local: true do |form| %>
@@ -52,5 +53,6 @@
   </p>
 
 <% end %>
+
 
 <%= link_to 'Back', users_path %>
