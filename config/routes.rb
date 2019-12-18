@@ -14,5 +14,8 @@ Rails.application.routes.draw do
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
+
+  get '/users/:id', to: 'users#show', as: 'profile'
+
   root 'welcome#index'
 end
