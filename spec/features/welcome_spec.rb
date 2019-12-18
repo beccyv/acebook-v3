@@ -8,7 +8,7 @@ RSpec.feature "Welcome to Acebook landing page", type: :feature do
 
   scenario "Can can click on Users link" do
     visit "/"
-    click_link("Users")
-    expect(page).to have_content("Listing Users")
+    click_link("Sign Up")
+    expect(page).to have_content("New User")
   end
 end
