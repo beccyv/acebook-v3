@@ -1,5 +1,5 @@
 require 'rails_helper'
-require 'features/web_helper'
+#require 'features/web_helper'
 
 RSpec.feature "Admin can click on link new user", type: :feature do
   scenario "Admin can click on link new user" do
@@ -19,8 +19,8 @@ RSpec.feature "Admin can click on link new user", type: :feature do
     click_button('Log in')
 
 
-    #visit "/users"
-    #click_link('New user')
-    expect(page).to have_content('Username: username')
+    visit "/users"
+    click_link('New user')
+    expect(page).to have_content('New User')
   end
 end
