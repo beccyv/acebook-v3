@@ -21,7 +21,12 @@
     <%= post.post %>
   </p>
 
+  <%= link_to 'Delete', [post.user, post],
+                 method: :delete,
+                 data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Edit', posts_update_path(post) %>
 <% end %>
+
 
 <h2>Add a post:</h2>
 <%= form_with(model: [ @user, @user.posts.build ], local: true) do |form| %>
@@ -35,5 +40,4 @@
   </p>
 <% end %>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to "Log Out", logout_path %>
