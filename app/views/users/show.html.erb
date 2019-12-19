@@ -1,14 +1,8 @@
 <p>
   <strong>Username:</strong>
-  <%= @user.username %>
-</p>
-
-<p>
+  <%= @user.username %><br>
   <strong>First Name:</strong>
-  <%= @user.first_name %>
-</p>
-
-<p>
+  <%= @user.first_name %><br>
   <strong>Last Name:</strong>
   <%= @user.last_name %>
 </p>
@@ -17,16 +11,18 @@
 <% @user.posts.each do |post| %>
 
    <p>
-    <strong>Post:</strong>
+    <strong>Post:</strong><br>
+    <%= post.created_at.strftime("%d %B %Y, at %I:%M%p") %><br>
     <%= post.post %>
-  </p>
+    <br>
+    <%= link_to 'Delete', [post.user, post],
+                   method: :delete,
+                   data: { confirm: 'Are you sure?' } %>
 
-  <%= link_to 'Delete', [post.user, post],
-                 method: :delete,
-                 data: { confirm: 'Are you sure?' } %>
-  <%= link_to 'Edit', edit_post(post) %>
+    <% # edit link was here but broke %>
+    </p>
+
 <% end %>
-
 
 <h2>Add a post:</h2>
 <%= form_with(model: [ @user, @user.posts.build ], local: true) do |form| %>

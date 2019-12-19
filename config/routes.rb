@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   get '/users/:id', to: 'users#show', as: 'profile'
 
-  get 'posts/:id/edit', to: 'posts#edit', as: :edit_post
+  get '/posts/:id/edit', to: 'posts#edit', as: :edit_post
   patch 'posts/:id', to: 'posts#update'
 
   root 'welcome#index'
