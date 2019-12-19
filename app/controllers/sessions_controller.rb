@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  skip_before_action :require_login
+
   def new
   end
 
@@ -6,7 +8,8 @@ class SessionsController < ApplicationController
     user = User.find_by_username(params[:username])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to root_url, notice: "Logged in!"
+      redirect_to user_path(user), notice: "Logged in!"
+      # "users/#{sessions[:user_id]}"
     else
       flash.now[:alert] = "Username or password is invalid"
       render "new"
@@ -17,5 +20,5 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     redirect_to root_url, notice: "Logged out!"
   end
-  
+
 end
