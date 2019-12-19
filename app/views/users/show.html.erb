@@ -7,9 +7,19 @@
   <%= @user.last_name %>
 </p>
 
-<h2>Posts</h2>
-<% @user.posts.each do |post| %>
+<h2>Add a post:</h2>
+<%= form_with(model: [ @user, @user.posts.build ], local: true) do |form| %>
 
+  <p>
+    <%= form.label :post %><br>
+    <%= form.text_area :post %><br>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+<h2>Posts</h2>
+<% #@user.posts.each do |post| %>
+<% @allposts.each do |post| %>
    <p>
     <strong>Post:</strong><br>
     <%= post.created_at.strftime("%d %B %Y, at %I:%M%p") %><br>
@@ -22,18 +32,6 @@
     <% # edit link was here but broke %>
     </p>
 
-<% end %>
-
-<h2>Add a post:</h2>
-<%= form_with(model: [ @user, @user.posts.build ], local: true) do |form| %>
-
-  <p>
-    <%= form.label :post %><br>
-    <%= form.text_area :post %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
 <% end %>
 
 <%= link_to "Log Out", logout_path %>
