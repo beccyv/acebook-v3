@@ -2,7 +2,8 @@ language: ruby
 services:
   - postgresql
 before_script:
-  -create role acebook with createdb login password ' '
+  -su postgres
+  -create role acebook with createdb login password 'password'
   -rails db:migrate RAILS_ENV=test
 
 script: bundle exec rspec
