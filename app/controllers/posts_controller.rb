@@ -6,20 +6,14 @@ class PostsController < ApplicationController
 end
 
 def edit
-  @user = User.find(params[:user_id])
-  @post = @user.posts.find(params[:id])
+  @post = Post.find(params[:id])
 end
 
 def update
-  # @post = Post.find(params[:id])
   @user = User.find(params[:user_id])
   @post = @user.posts.find(params[:id])
-
-  if @post.update(post_params)
-    redirect_to user_path(@user)
-  else
-    render 'edit'
-  end
+  @post.update(post: params[:post][:post])
+  redirect_to user_path(@user)
 end
 
 def destroy

@@ -24,7 +24,7 @@
   <%= link_to 'Delete', [post.user, post],
                  method: :delete,
                  data: { confirm: 'Are you sure?' } %>
-  <%= link_to 'Edit', posts_update_path(post) %>
+  <%= link_to 'Edit', edit_post(post) %>
 <% end %>
 
 
