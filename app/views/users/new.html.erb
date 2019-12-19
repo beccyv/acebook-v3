@@ -1,8 +1,18 @@
-<p id="alert"><%= alert %></p>
+<div class="nav-top">
+  <% if current_user %>
+    <a href="sessions/create">My Profile</a>
+    <a href="sessions/destroy">Log Out</a>
+  <% else %>
+    <a href="/welcome/index">Home</a>
+    <a href="/login">Login</a>
+    <a class="active" href="/signup">Sign Up</a>
+  <% end %>
+</div>
+<div class="sign-up-box">
 <h1>New User</h1>
-
+<hr class="medium_hr">
+<p id="alert"><%= alert %></p>
 <%= form_with scope: :user, url: users_path, local: true do |form| %>
-
 
 <% if @user.errors.any? %>
   <div id="error_explanation">
@@ -17,42 +27,47 @@
     </ul>
   </div>
 <% end %>
+<p>
+  <%= form.label :first_name %><br>
+  <%= form.text_field :first_name %>
+</p>
 
-  <p>
-    <%= form.label :first_name %><br>
-    <%= form.text_field :first_name %>
-  </p>
+<p>
+  <%= form.label :last_name %><br>
+  <%= form.text_field :last_name %>
+</p>
 
-  <p>
-    <%= form.label :last_name %><br>
-    <%= form.text_field :last_name %>
-  </p>
+<p>
+  <%= form.label :email %><br>
+  <%= form.text_field :email %>
+</p>
+<!-- <div class="col">
+       <div class="hide-md-lg">
+         <p>Or sign in manually:</p>
+       </div>
 
-  <p>
-    <%= form.label :email %><br>
-    <%= form.text_field :email %>
-  </p>
+<p> -->
+  <%= form.label :username %><br>
+  <%= form.text_field :username %>
+</p>
 
-  <p>
-    <%= form.label :username %><br>
-    <%= form.text_field :username %>
-  </p>
+<p>
+  <%= form.label :password %><br>
+  <%= form.password_field :password %>
+</p>
 
-  <p>
-    <%= form.label :password %><br>
-    <%= form.text_field :password %>
-  </p>
+<p>
+  <%= form.label :password_confirmation %><br>
+  <%= form.password_field :password_confirmation %>
+</p>
+</div>
 
-  <p>
-    <%= form.label :password_confirmation %><br>
-    <%= form.text_field :password_confirmation %>
-  </p>
-
-  <p>
-    <%= form.submit %>
-  </p>
+<p class="button">
+  <%= form.submit %>
+</p>
 
 <% end %>
 
-
-<%= link_to 'Back', users_path %>
+<div>
+  <a class="link" href="/login">Already registered? Sign In!</a>
+</div>
