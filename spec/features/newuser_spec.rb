@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.feature "New User can sign up", type: :feature do
   scenario "User can signup for Acebook" do
-    visit "/users/new"
+    visit "/"
     fill_in('Username', with: 'username')
     fill_in('Password', with: 'password')
     fill_in('Password confirmation', with: 'password')
@@ -78,7 +78,7 @@ scenario "User can signup for Acebook" do
   expect(page).to have_content('Last name is too long')
 end
 
-scenario "Admin cna view user list" do
+scenario "Admin can view user list" do
   visit "/users/new"
   fill_in('Username', with: 'username')
   fill_in('Password', with: 'password')
@@ -130,4 +130,10 @@ scenario "User can signup for Acebook" do
       click_link('Show')
       expect(page).to have_content('Add a post:')
   end
+
+  scenario "testing webhelper" do
+    sign_up
+    log_in
+    expect(page).to have_content('Last Name: Boom')
+end
 end
