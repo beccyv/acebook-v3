@@ -1,15 +1,29 @@
-<p id="alert"><%= alert %></p>
-<h1>Login</h1>
-<%= form_tag sessions_path do |form| %>
-  <div class="field">
-    <%= label_tag :username %>
-    <%= text_field_tag :username %>
-  </div>
-  <div class="field">
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-  </div>
-  <div class="actions">
-    <%= submit_tag "Log in" %>
-  </div>
-<% end %>
+<div class="nav-top">
+  <% if current_user %>
+    <a href="sessions/create">My Profile</a>
+    <a href="sessions/destroy">Log Out</a>
+  <% else %>
+    <a href="/">Home</a>
+    <a class="active" href="/login">Login</a>
+    <a href="/signup">Sign Up</a>
+  <% end %>
+</div>
+<div class="login-box">
+  <h1>Login</h1>
+  <hr class="medium_hr">
+  <p id="alert"><%= alert %></p>
+    <%= form_tag sessions_path do |form| %>
+      <div class="field">
+        <%= label_tag :username %>
+        <%= text_field_tag :username %>
+      </div>
+      <div class="field">
+        <%= label_tag :password %>
+        <%= password_field_tag :password %>
+      </div>
+      <div class="actions">
+        <%= submit_tag "Log in" %>
+      </div>
+    <% end %>
+    <a class="link" href="/signup">Not yet registered? Click here to sign up!</a>
+</div>
