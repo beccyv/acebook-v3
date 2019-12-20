@@ -9,7 +9,7 @@ RSpec.feature "User can add a post", type: :feature do
     fill_in('Email', with: 'peter1@gmail.com')
     fill_in('First name', with: 'Peter')
     fill_in('Last name', with: 'Boom')
-    click_button('Save User')
+    click_button('Sign Up')
 
     click_link('Log In')
     fill_in('Username', with: 'username')
@@ -17,6 +17,6 @@ RSpec.feature "User can add a post", type: :feature do
     click_button('Log in')
     fill_in('Post', with: 'Hello World')
     click_button('Create Post')
-    expect(page).to have_content('Post: Hello World')
+    expect(page).to have_content('Hello World')
   end
 end

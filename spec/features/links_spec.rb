@@ -11,7 +11,7 @@ RSpec.feature "Admin can click on link new user", type: :feature do
     fill_in('Username', with: 'username')
     fill_in('Password', with: 'password')
     fill_in('Password confirmation', with: 'password')
-    click_button('Save User')
+    click_button('Sign Up')
 
     click_link('Log In')
     fill_in('Username', with: 'username')

@@ -27,38 +27,29 @@
     </ul>
   </div>
 <% end %>
-<p>
-  <%= form.label :first_name %><br>
-  <%= form.text_field :first_name %>
-</p>
 
-<p>
-  <%= form.label :last_name %><br>
-  <%= form.text_field :last_name %>
-</p>
-
-<p>
-  <%= form.label :email %><br>
-  <%= form.text_field :email %>
-</p>
-
-<p>
-  <%= form.label :username %><br>
-  <%= form.text_field :username %>
-</p>
-
-<p>
-  <%= form.label :password %><br>
-  <%= form.password_field :password %>
-</p>
-
-<p>
-  <%= form.label :password_confirmation %><br>
-  <%= form.password_field :password_confirmation %>
-</p>
+  <p>
+    <%= form.label :first_name, class: "signuptext"%><br>
+    <%= form.text_field :first_name, class: "signupbox" %>
+    <br>
+    <%= form.label :last_name, class: "signuptext" %><br>
+    <%= form.text_field :last_name, class: "signupbox" %>
+    <br>
+    <%= form.label :email, class: "signuptext" %><br>
+    <%= form.text_field :email, class: "signupbox" %>
+    <br>
+    <%= form.label :username, class: "signuptext" %><br>
+    <%= form.text_field :username, class: "signupbox" %>
+    <br>
+    <%= form.label :password, class: "signuptext" %><br>
+    <%= form.password_field :password, class: "signupbox" %>
+    <br>
+    <%= form.label :password_confirmation, class: "signuptext" %><br>
+    <%= form.password_field :password_confirmation, class: "signupbox" %>
+  </p>
 
 <p class="button">
-  <%= form.submit %>
+  <%= form.submit "Sign Up" %>
 </p>
 
 <% end %>

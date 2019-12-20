@@ -58,21 +58,20 @@ h1 {
 }
 
 .login-box {
+  margin: auto;
   border: 3px solid ivory;
   border-radius: 25px;
   width: 400px;
   font-size: 30px;
-  margin-left: 500px;
-  margin-top: 60px;
   padding-bottom: 40px;
 }
 
 .sign-up-box {
+  margin: auto;
   border: 3px solid ivory;
   border-radius: 25px;
   width: 800px;
   font-size: 30px;
-  margin-left: 300px;
   padding-bottom: 40px;
   margin-bottom: 50px;
 }
@@ -124,7 +123,6 @@ h1 {
 }
 
 .footer {
-  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -140,6 +138,15 @@ h1 {
 
 .back_link {
   position: left;
+}
+
+.signuptext {
+  margin: 0px;
+}
+
+.signupbox {
+  margin: 0px;
+  margin-bottom: 20px;
 }
 
 .spacer {
