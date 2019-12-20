@@ -1,6 +1,7 @@
-<%= stylesheet_link_tag "welcome" %>
-
 <h1>Welcome to Acebook</h1>
+<div>
+  <%= image_tag("wizardCow.jpg", :size => "360x280", :alt => "wizardCow") %>
+</div>
 <hr class="medium_hr">
 <% if current_user %>
   Logged in as <%= current_user.username %>
