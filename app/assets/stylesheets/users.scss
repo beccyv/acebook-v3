@@ -8,18 +8,24 @@
 
 #namebox {
   border-style: solid;
+  border-color: white;
+  border-radius: 20px;
   width: 50%;
   margin: auto;
 }
 
 #addpost {
   border-style: solid;
+  border-color: white;
+  border-radius: 20px;
   width: 50%;
   margin: auto;
 }
 
 .postbox {
   width: 80%;
+  height: 60px;
+  font-size: 15px;
 }
 
 .postbutton {
@@ -31,12 +37,18 @@
 
 #posts {
   border-style: solid;
+  border-color: white;
+  border-radius: 20px;
   width: 50%;
   margin: auto;
 }
 
 #singlepost {
-  border-style: solid;
+  border-style: none;
+  border-color: #dad8d8;
+  border-radius: 20px;
   width: 90%;
   margin: auto;
+  background-image: linear-gradient(to right, #e0e0e0, #d5bedf);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
