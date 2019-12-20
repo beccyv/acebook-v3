@@ -18,7 +18,7 @@
 
 body {
   font-family: 'Rancho';
-  background-image: linear-gradient( to left, ivory, purple);
+  background-image: linear-gradient( to left, #26bad4, ivory, purple);
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -103,7 +103,7 @@ h1 {
 /* links inside the navigation bar */
 .nav-top a {
   float: left;
-  color: lightslategray;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -113,7 +113,8 @@ h1 {
 /* Change the color of links on hover */
 .nav-top a:hover {
   background-color: purple;
-  color: black;
+  text-decoration: underline;
+  color: white;
 }
 
 /* Add a color to the active/current link */
