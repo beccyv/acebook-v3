@@ -3,6 +3,7 @@
 Acebook wizardCow can be accessed [here].
 
 ## 1 User Experience Design (UX)
+  Acebook wizardCow brands itself on a three-gradient style background aiming to appeal to a wide range of target audiences.
 ## 1.1 User Stories Completed
   * Authentication
   ```
@@ -31,15 +32,18 @@ Acebook wizardCow can be accessed [here].
 
 ## 2 Features
 ## 2.1 Existing Features
-  Discuss (Create, Read, Update, Delete) Features
+  - Create an account (sign up)
+  - Log in to account
+  - Create a post
+  - Show all posts made by user
 
 ## 2.2 Database
- (Screenshot of test database)
+  PostgreSQL used in building the database for storing user creation and user posts
+ - Users table
+ - Posts table
 
-## 2.3 Layout and Overall Aesthetics
-
-## 2.4 Potential Features to Implement
-
+## 2.3 Potential Features to Implement
+  - Ability to edit posts
 ## 3 Technologies used
   - [Atom (IDE)] - The Integrated Development Environment (IDE) used for building the website.
   - [Ruby on Rails] - Main programming language used for building the Acebook - wizardCow Application.
@@ -54,6 +58,7 @@ Acebook wizardCow can be accessed [here].
 
 ## 4.2 Automated Test Results
  (Insert screenshot of rspec results)
+ ![RSpec results](/assets/images/rspec_results.png)
 ## 4.3 Device Screen Size and Browser Compatibility Test Results
   * The below screen size tests were carried out assessing performance of all pages of the website using Google Chrome 78.0 (Mac):
 
@@ -72,7 +77,7 @@ Acebook wizardCow can be accessed [here].
   * Key: ✓ - Application loads successfully
 
 ## 4.4 Responses from users who tried out the Acebook - wizardCow application
-
+  "Wow, very nice gradient. Perhaps amend the footer and button labels" - Josh
 
 ## 4.5 Interesting bugs or problems discovered during testing
   - Struggling with rails db:migrate RAILS_ENV=test which conflicted with simplecov. We figured out that `require :false was causing` us issues and thus commenting it out made our test db work. So if it runs every time we run our project then \_O_/ so be it.
@@ -93,32 +98,12 @@ Acebook wizardCow can be accessed [here].
     application to your chosen Heroku point.
 
 ## 6. Credits
-## 6.1 Content/Media
+## 6.1 Content/Media/Acknowledgements
   - Ruby Documentation
   - Rails Setup Documentation
-## 6.2 Acknowledgements
+  - WizardCow image
+  - Google Font - Rancho
 
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
 
 [//]: # (Below are the reference links used in the body of the README file)
 [here]: <https://acebook-wizardcow3.herokuapp.com/>
